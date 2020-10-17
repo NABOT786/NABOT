@@ -10,8 +10,8 @@ bot.on('message', message =>{
     var prefix = ">" //The text before commands, you can put anything that you prefer
 
     if(message.author.id != "766532290318696449" && message.channel.id === "766611619471294464"){
-        if(msg.startsWith('>', 0)){
-            if(msg === prefix + "bang" && message.channel.id === "766611619471294464"){
+        if(msg.startsWith('.', 0)){
+            if(msg === prefix + "ping" && message.channel.id === "766611619471294464"){
                 message.channel.send('BOOM!!!!!') // Sends a message to the channel, with the content
             }
             else{
@@ -20,7 +20,7 @@ bot.on('message', message =>{
         }
         else{
             message.delete();
-            message.channel.send(sender + " this bot only accepts commands which starts with '>' dot.");
+            message.channel.send(sender + " this bot only accepts commands which starts with '.' dot.");
         }
     }
 });
